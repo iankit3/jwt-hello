@@ -9,7 +9,7 @@ let rest = require('./routes/Rest');
 let auth = require('./routes/Auth');
 let isAuthorised = require("./Utils/Authorisation");
 
-app.disable('x-powered-by');
+app.disable('etag').disable('x-powered-by');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
